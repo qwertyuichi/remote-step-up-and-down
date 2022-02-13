@@ -12,7 +12,7 @@ def plot_current_time(image):
     current_time = datetime.datetime.now()
     put_outlined_text(current_time.strftime("%H:%M:%S"), (730, 20), image)
     
-def put_outlined_text(text, point, image):
+def put_outlined_text(text, point, image, color=(0, 255, 0)):
     # アウトライン付きの文字を描写
     cv2.putText(
         image,
@@ -30,7 +30,7 @@ def put_outlined_text(text, point, image):
         org=point,
         fontFace=cv2.FONT_HERSHEY_SIMPLEX,
         fontScale=0.8,
-        color=(0, 255, 0),
+        color=color,
         thickness=1,
         lineType=cv2.LINE_AA,
     )

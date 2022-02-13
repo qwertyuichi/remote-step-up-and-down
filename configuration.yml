@@ -1,0 +1,34 @@
+%YAML 1.2
+---
+realsense:
+  width:              848
+  height:             480
+  fps:                15
+  #minimum_distance:   160
+  #maximum_distance:   5000
+
+roi:
+  width:              600
+  height:             100
+
+depth_max:            1000
+distance_min:         390
+distance_max:         410
+angle_min:            -2.0
+angle_max:            +2.0
+
+debug:
+  streaming_enable:   True
+  streaming_port:     12345
+  imshow_enable:      True
+  save_movie_enable:  True
+  movie_folder_path:  /home/yuichi/Share/log
+  #save_log_enable:    False
+  #log_folder_path:    /home/yuichi/Share/log
+
+serial_communication:
+  primary_port:       "/dev/ttyTHS0"  # インジケータと接続するポート
+  secondary_port:     "/dev/ttyTHS1"  # ZYNQと接続するポート
+  baud_rate:          115200
+  max_dev:            256             # DEVの最大値(メッセージフォーマット参照)
+  max_object:         3
